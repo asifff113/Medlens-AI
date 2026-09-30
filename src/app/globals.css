@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 246 247 249;
+  --fg: 15 22 34;
+  --accent: 31 143 107;
+}
+
+html, body {
+  font-feature-settings: "ss01", "ss02";
+}
+
+.bn-numerals {
+  font-variant-numeric: bengali;
+}
+
+.prose-card {
+  @apply rounded-xl border border-ink-200 bg-white p-4 shadow-sm;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-1 rounded-md bg-accent-500 px-3 py-2 text-sm font-medium text-white hover:bg-accent-600 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-1 rounded-md border border-ink-200 bg-white px-3 py-2 text-sm font-medium text-ink-700 hover:bg-ink-50;
+}
+
+.btn-warn {
+  @apply inline-flex items-center justify-center gap-1 rounded-md bg-warn-500 px-3 py-2 text-sm font-medium text-white hover:bg-warn-600;
+}
+
+.label-chip {
+  @apply inline-flex items-center gap-1 rounded-full bg-ink-100 px-2 py-0.5 text-xs font-medium text-ink-700;
+}
+
+.section-title {
+  @apply text-sm font-semibold uppercase tracking-wide text-ink-500;
+}
+
+.tag-doc {
+  @apply rounded bg-ink-100 px-2 py-0.5 text-xs font-medium text-ink-700;
+}
+.tag-derived {
+  @apply rounded bg-accent-100 px-2 py-0.5 text-xs font-medium text-accent-700;
+}
+.tag-review {
+  @apply rounded bg-yellow-100 px-2 py-0.5 text-xs font-medium text-yellow-800;
+}
+.tag-quarantine {
+  @apply rounded bg-red-100 px-2 py-0.5 text-xs font-medium text-red-800;
+}
+.tag-wellbeing {
+  @apply rounded bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800;
+}
+
+.fade-in {
+  animation: fade-in 0.25s ease-out;
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
